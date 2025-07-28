@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import restaurantMockup from "@/assets/restaurant-mockup.jpg";
 import freelancerMockup from "@/assets/freelancer-mockup.jpg";
 import shopMockup from "@/assets/shop-mockup.jpg";
 
 const PortfolioSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const projects = [
     {
       title: "Restaurant Landing Page",
@@ -24,8 +26,8 @@ const PortfolioSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-6">
+    <section ref={ref} className="py-20 bg-background">
+      <div className={`max-w-7xl mx-auto px-6 transition-all duration-700 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Recent Projects
@@ -34,7 +36,13 @@ const PortfolioSection = () => {
         
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {projects.map((project, index) => (
-            <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-0 shadow-soft">
+            <Card 
+              key={index} 
+              className={`group hover:shadow-elegant transition-all duration-300 border-0 shadow-soft hover-scale ${
+                isVisible ? 'animate-fade-in' : 'opacity-0'
+              }`}
+              style={{ animationDelay: `${index * 0.2}s` }}
+            >
               <CardContent className="p-0">
                 <div className="overflow-hidden rounded-t-lg">
                   <img 
