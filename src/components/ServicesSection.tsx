@@ -9,12 +9,13 @@ const ServicesSection = () => {
       price: "$200-400",
       description: "Perfect for new businesses",
       features: [
-        "Single page website",
+        "1 page website",
         "Mobile responsive design",
-        "Contact form",
-        "Basic SEO setup",
-        "2 weeks delivery",
-        "1 month support"
+        "Basic features only",
+        "Online payment: Not included",
+        "Custom features: Not included",
+        "Setup fee: +$40",
+        "Maintenance: +$10/month"
       ]
     },
     {
@@ -22,13 +23,13 @@ const ServicesSection = () => {
       price: "$400-600",
       description: "Most popular choice",
       features: [
-        "Up to 5 pages",
-        "Custom design",
-        "Contact forms & booking",
-        "Advanced SEO",
-        "Google Analytics",
-        "3 weeks delivery",
-        "3 months support"
+        "3-5 pages",
+        "Choose up to 3 features",
+        "Mobile responsive design",
+        "Online payment: +$150 extra",
+        "Custom features: Not included",
+        "Setup fee: +$40",
+        "Maintenance: +$10/month"
       ],
       popular: true
     },
@@ -37,13 +38,13 @@ const ServicesSection = () => {
       price: "$600-1000",
       description: "For growing businesses",
       features: [
-        "Up to 10 pages",
-        "E-commerce ready",
-        "Custom functionality",
-        "Premium SEO package",
-        "Performance optimization",
-        "4 weeks delivery",
-        "6 months support"
+        "6+ pages",
+        "Choose any features",
+        "Mobile responsive design",
+        "Online payment: +$100 extra",
+        "1 small custom feature included",
+        "Setup fee: +$40",
+        "Maintenance: +$10/month"
       ]
     }
   ];
