@@ -26,12 +26,12 @@ const HeroSection = () => {
           I design fast, clean websites that help you attract more customers—built with today's best web tools and tailored to your goals.
         </p>
         
-        <Button 
-          size="lg" 
-          className="bg-white text-primary hover:bg-purple-50 text-lg px-8 py-6 rounded-full shadow-elegant transition-all duration-300 hover:scale-105 animate-fade-in [animation-delay:0.4s] hover-scale"
-        >
-          Get Your Website
-        </Button>
+       <Button onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSeTsI4j0vOwQ9AhRWciFgIp6lhLVv_jNVthEKUqC-_HcWHNOQ/viewform?usp=header', '_blank')}
+        size="lg" 
+        className="bg-white text-primary hover:bg-purple-50 text-lg px-8 py-6 rounded-full shadow-elegant transition-all duration-300 hover:scale-105 animate-fade-in [animation-delay:0.4s] hover-scale"
+>
+  Get Your Website
+</Button>
       </div>
     </section>
   );
