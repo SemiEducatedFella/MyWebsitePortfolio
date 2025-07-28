@@ -5,8 +5,8 @@ import { Check } from "lucide-react";
 const ServicesSection = () => {
   const plans = [
     {
-      name: "Starter",
-      price: "$999",
+      name: "Basic",
+      price: "$200-400",
       description: "Perfect for new businesses",
       features: [
         "Single page website",
@@ -18,8 +18,8 @@ const ServicesSection = () => {
       ]
     },
     {
-      name: "Professional",
-      price: "$1,999",
+      name: "Standard",
+      price: "$400-600",
       description: "Most popular choice",
       features: [
         "Up to 5 pages",
@@ -34,7 +34,7 @@ const ServicesSection = () => {
     },
     {
       name: "Premium",
-      price: "$3,499",
+      price: "$600-1000",
       description: "For growing businesses",
       features: [
         "Up to 10 pages",

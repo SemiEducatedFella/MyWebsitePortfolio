@@ -7,17 +7,17 @@ const Footer = () => {
         <div className="text-center">
           <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 text-sm">
             <div className="flex items-center">
-              <span>© Your Name or Business Name</span>
+              <span>© MyersMakarenkov</span>
             </div>
             
             <div className="flex items-center">
               <Mail className="w-4 h-4 mr-2" />
-              <span>yourname@email.com</span>
+              <span>myers.makarenkov@gmail.com</span>
             </div>
             
             <div className="flex items-center">
               <Phone className="w-4 h-4 mr-2" />
-              <span>(123) 456-7890</span>
+              <span>+1 (945) 265-5233</span>
             </div>
           </div>
         </div>
