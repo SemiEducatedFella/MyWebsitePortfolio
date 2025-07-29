@@ -115,8 +115,8 @@ const ServicesSection = () => {
                 
                 <Button 
                   className={`w-full ${plan.popular 
-                    ? 'bg-primary hover:bg-primary/90' 
-                    : 'variant-outline border-primary text-primary hover:bg-primary hover:text-white'
+                    ? 'bg-primary hover:bg-primary/90 text-white' 
+                    : 'bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white'
                   }`}
                   size="lg"
                   onClick={() => scrollToContact(plan.name)}
