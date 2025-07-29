@@ -49,6 +49,20 @@ const ServicesSection = () => {
     }
   ];
 
+  const scrollToContact = (planName) => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start' 
+      });
+      
+      // Optional: Store the selected plan for the contact form
+      // You can access this in your contact section with: localStorage.getItem('selectedPlan')
+      localStorage.setItem('selectedPlan', planName);
+    }
+  };
+
   return (
     <section className="py-20 bg-gradient-subtle">
       <div className="max-w-7xl mx-auto px-6">
@@ -105,6 +119,7 @@ const ServicesSection = () => {
                     : 'variant-outline border-primary text-primary hover:bg-primary hover:text-white'
                   }`}
                   size="lg"
+                  onClick={() => scrollToContact(plan.name)}
                 >
                   Get Started
                 </Button>

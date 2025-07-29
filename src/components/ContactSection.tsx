@@ -36,7 +36,6 @@ const ContactSection = () => {
                 <ul className="text-sm text-muted-foreground space-y-1">
                   <li>• Quick 5-minute form</li>
                   <li>• Custom quote within 24 hours</li>
-                  <li>• Free consultation call</li>
                   <li>• No obligation to proceed</li>
                 </ul>
               </div>
