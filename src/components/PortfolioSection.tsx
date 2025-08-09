@@ -2,39 +2,45 @@ import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { X, ExternalLink } from "lucide-react";
-import restaurantMockup from "@/assets/restaurant-mockup.jpg";
-import freelancerMockup from "@/assets/freelancer-mockup.jpg";
-import shopMockup from "@/assets/shop-mockup.jpg";
+import { X, ExternalLink, Eye } from "lucide-react";
+import antoniosImage from "@/assets/antonios-restaurant.png";
+import moveProImage from "@/assets/dallas-move-pros.png"; 
+import premierDriveImage from "@/assets/dallas-premier-drive.png";
+
+// Import your images
+
 
 const PortfolioSection = () => {
   const { ref, isVisible } = useScrollAnimation();
   const [showModal, setShowModal] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const projects = [
-    {
-      title: "Restaurant Landing Page",
-      description: "A clean one-page site with menu highlights, booking links, and a map.",
-      detailedDescription: "This restaurant website features a modern design with hero section, interactive menu display, online reservation system, customer testimonials, and integrated Google Maps for easy location finding. Perfect for establishing an online presence that drives foot traffic.",
-      image: restaurantMockup,
-      features: ["Online Menu Display", "Reservation System", "Google Maps Integration", "Customer Reviews", "Mobile Responsive"],
-    },
-    {
-      title: "Freelancer Portfolio",
-      description: "A modern personal brand website with contact form and service list.",
-      detailedDescription: "A professional portfolio showcasing services, past work, and client testimonials. Includes a contact form, service packages, and a clean design that builds trust and converts visitors into clients.",
-      image: freelancerMockup,
-      features: ["Portfolio Gallery", "Service Packages", "Contact Form", "Client Testimonials", "Professional Design"],
-    },
-    {
-      title: "Local Shop Website",
-      description: "Includes product gallery, customer reviews, and Google Maps integration.",
-      detailedDescription: "An e-commerce ready website for local businesses featuring product showcases, customer review system, location finder, and business information. Designed to increase local visibility and online sales.",
-      image: shopMockup,
-      features: ["Product Gallery", "Customer Reviews", "Location Finder", "Business Hours", "Contact Information"],
-    },
-  ];
+ const projects = [
+  {
+    title: "Antonio's Dallas Essence",
+    description: "A sophisticated restaurant website featuring authentic Italian dining experience with online reservations.",
+    detailedDescription: "A premium restaurant website showcasing Antonio's authentic Italian cuisine and Dallas location. Features elegant design, menu highlights, online reservation system, location details, and customer testimonials. Perfect example of how to establish a strong online presence for fine dining establishments.",
+    image: antoniosImage,
+    liveUrl: "https://antonios-dallas-essence.lovable.app",
+    features: ["Online Reservation System", "Interactive Menu Display", "Location & Hours", "Customer Reviews", "Mobile Responsive Design", "Contact Information"],
+  },
+  {
+    title: "Dallas Move Pros",
+    description: "Professional moving company website with service details, quotes, and customer testimonials.",
+    detailedDescription: "A comprehensive moving company website designed to build trust and generate leads. Features service offerings, quote request system, customer testimonials, service areas, and professional team showcase. Optimized for local SEO and conversion.",
+    image: moveProImage,
+    liveUrl: "https://dallas-move-pros.lovable.app/",
+    features: ["Quote Request System", "Service Area Coverage", "Customer Testimonials", "Team Showcase", "Service Packages", "Contact & Booking"],
+  },
+  {
+    title: "Dallas Premier Drive",
+    description: "Auto repair shop website showcasing services, expertise, and customer satisfaction.",
+    detailedDescription: "A professional auto repair website that builds credibility and attracts local customers. Features comprehensive service listings, expert team information, customer reviews, location details, and appointment booking. Designed to convert visitors into customers.",
+    image: premierDriveImage,
+    liveUrl: "https://dallas-premier-drive.lovable.app",
+    features: ["Service Listings", "Expert Team Profiles", "Customer Reviews", "Appointment Booking", "Location & Hours", "Warranty Information"],
+  },
+];
 
   const openModal = (project) => {
     setSelectedProject(project);
@@ -52,7 +58,7 @@ const PortfolioSection = () => {
         <div className={`max-w-7xl mx-auto px-6 transition-all duration-700 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Recent Projects
+              Live Website Examples
             </h2>
           </div>
           
@@ -99,7 +105,7 @@ const PortfolioSection = () => {
               size="lg" 
               className="border-primary text-primary hover:bg-primary hover:text-white"
             >
-              View Demos
+              View Live Examples
             </Button>
           </div>
         </div>
@@ -111,7 +117,7 @@ const PortfolioSection = () => {
           <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div className="sticky top-0 bg-white border-b px-6 py-4 flex justify-between items-center">
               <h3 className="text-2xl font-bold text-gray-900">
-                {selectedProject ? selectedProject.title : "Demo Gallery"}
+                {selectedProject ? selectedProject.title : "Live Website Examples"}
               </h3>
               <button
                 onClick={closeModal}
@@ -135,13 +141,24 @@ const PortfolioSection = () => {
                     <p className="text-gray-600 leading-relaxed mb-6">
                       {selectedProject.detailedDescription}
                     </p>
-                    <Button 
-                      onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSeTsI4j0vOwQ9AhRWciFgIp6lhLVv_jNVthEKUqC-_HcWHNOQ/viewform?usp=header', '_blank')}
-                      className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:opacity-90"
-                    >
-                      Get Something Similar
-                      <ExternalLink className="ml-2 w-4 h-4" />
-                    </Button>
+                    
+                    {/* Two Action Buttons */}
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <Button 
+                        onClick={() => window.open(selectedProject.liveUrl, '_blank')}
+                        className="bg-gradient-to-r from-blue-600 to-blue-700 hover:opacity-90 flex-1"
+                      >
+                        <Eye className="mr-2 w-4 h-4" />
+                        View Live Site
+                      </Button>
+                      <Button 
+                        onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSeTsI4j0vOwQ9AhRWciFgIp6lhLVv_jNVthEKUqC-_HcWHNOQ/viewform?usp=header', '_blank')}
+                        className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:opacity-90 flex-1"
+                      >
+                        <ExternalLink className="mr-2 w-4 h-4" />
+                        Get One Like This
+                      </Button>
+                    </div>
                   </div>
                   <div>
                     <h4 className="text-xl font-semibold mb-4">Key Features</h4>
@@ -160,7 +177,7 @@ const PortfolioSection = () => {
               // All Projects Grid View
               <div className="p-6">
                 <p className="text-gray-600 mb-8 text-center">
-                  Click on any project below to see more details and features
+                  Click on any project below to see details and visit the live website
                 </p>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {projects.map((project, index) => (
@@ -169,26 +186,34 @@ const PortfolioSection = () => {
                       onClick={() => setSelectedProject(project)}
                       className="cursor-pointer group"
                     >
-                      <div className="overflow-hidden rounded-lg mb-4">
+                      <div className="overflow-hidden rounded-lg mb-4 relative">
                         <img 
                           src={project.image} 
                           alt={project.title}
                           className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                         />
+                        <div className="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                          LIVE
+                        </div>
                       </div>
                       <h4 className="font-semibold text-gray-900 mb-2">{project.title}</h4>
                       <p className="text-sm text-gray-600">{project.description}</p>
                     </div>
                   ))}
                 </div>
-                <div className="text-center mt-8">
-                  <Button 
-                    onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSeTsI4j0vOwQ9AhRWciFgIp6lhLVv_jNVthEKUqC-_HcWHNOQ/viewform?usp=header', '_blank')}
-                    className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:opacity-90"
-                  >
-                    Start Your Project
-                    <ExternalLink className="ml-2 w-4 h-4" />
-                  </Button>
+                <div className="text-center mt-8 space-y-4">
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Button 
+                      onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSeTsI4j0vOwQ9AhRWciFgIp6lhLVv_jNVthEKUqC-_HcWHNOQ/viewform?usp=header', '_blank')}
+                      className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:opacity-90"
+                    >
+                      Start Your Project
+                      <ExternalLink className="ml-2 w-4 h-4" />
+                    </Button>
+                  </div>
+                  <p className="text-sm text-gray-500">
+                    Click any project above to view the live website
+                  </p>
                 </div>
               </div>
             )}
