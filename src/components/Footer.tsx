@@ -1,4 +1,4 @@
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -18,6 +18,21 @@ const Footer = () => {
             <div className="flex items-center">
               <Phone className="w-4 h-4 mr-2" />
               <span>+1 (945) 265-5233</span>
+            </div>
+
+            {/* Instagram Link */}
+            <div className="flex items-center">
+              <div className="w-4 h-4 mr-2 bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 rounded flex items-center justify-center">
+                <Instagram className="w-2.5 h-2.5 text-white" />
+              </div>
+              <a 
+                href="https://www.instagram.com/myersmakarenkov/?hl=en" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-gray-300 transition-colors"
+              >
+                @myersmakarenkov
+              </a>
             </div>
           </div>
         </div>

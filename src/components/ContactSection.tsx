@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Phone, ExternalLink } from "lucide-react";
+import { Mail, Phone, ExternalLink, Instagram } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -77,6 +77,26 @@ const ContactSection = () => {
                     <div>
                       <div className="font-medium text-foreground">Phone</div>
                       <div className="text-muted-foreground">+1 (945) 265-5233</div>
+                    </div>
+                  </div>
+
+                  {/* Instagram Link */}
+                  <div className="flex items-center">
+                    <div className="w-6 h-6 mr-4 flex items-center justify-center">
+                      <div className="w-5 h-5 bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 rounded flex items-center justify-center">
+                        <Instagram className="w-3 h-3 text-white" />
+                      </div>
+                    </div>
+                    <div>
+                      <div className="font-medium text-foreground">Instagram</div>
+                      <a 
+                        href="https://www.instagram.com/myersmakarenkov/?hl=en" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        @myersmakarenkov
+                      </a>
                     </div>
                   </div>
                 </div>
