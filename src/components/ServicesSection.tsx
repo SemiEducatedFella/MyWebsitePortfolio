@@ -5,46 +5,47 @@ import { Check } from "lucide-react";
 const ServicesSection = () => {
   const plans = [
     {
-      name: "Basic",
-      price: "$200-400",
+      name: "Starter",
+      price: "💰$199",
       description: "Perfect for new businesses",
       features: [
-        "1 page website",
+        "1–3 pages (Home, Menu, Contact)",
         "Mobile responsive design",
         "Basic features only",
-        "Online payment: Not included",
-        "Custom features: Not included",
-        "Setup fee: +$40",
-        "Maintenance: +$10/month"
+        "Menu with categories + “Order Online” button (links to DoorDash/GrubHub etc.)",
+        "Setup: included",
+        "Hosting & updates: $15/month",
+        "Online payment integration: +$50 add-on"
       ]
     },
     {
       name: "Standard",
-      price: "$400-600",
+      price: "💰 $299",
       description: "Most popular choice",
       features: [
-        "3-5 pages",
-        "Choose up to 3 features",
+        "4–6 pages (Home, Menu, About, Contact, Gallery etc.)",
+        "Everything in Starter + About/Gallery pages + branding",
         "Mobile responsive design",
-        "Online payment: +$150 extra",
-        "Custom features: Not included",
-        "Setup fee: +$40",
-        "Maintenance: +$10/month"
+        "Menu with categories + “Order Online” button",
+        "Setup: included",
+        "Hosting & updates: $15/month",
+        "Online payment integration: +$50 add-on"
       ],
       popular: true
     },
     {
       name: "Premium",
-      price: "$600-1000",
+      price: "💰 $499–$599",
       description: "For growing businesses",
       features: [
-        "6+ pages",
-        "Choose any features",
+        "6+ pages (all Standard pages plus Specials, Events, or other custom pages)",
+        "Everything in Full Website + priority turnaround",
         "Mobile responsive design",
-        "Online payment: +$100 extra",
-        "1 small custom feature included",
-        "Setup fee: +$40",
-        "Maintenance: +$10/month"
+        "Menu with categories + “Order Online” button",
+        "One small custom feature included (e.g., reservation form, specials calendar)",
+        "Setup: included",
+        "Hosting & updates: $15/month",
+        "Online payment integration: included"
       ]
     }
   ];
