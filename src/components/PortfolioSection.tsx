@@ -9,6 +9,7 @@ import antoniosImage from "@/assets/antonios-restaurant.png";
 import moveProImage from "@/assets/dallas-move-pros.png"; 
 import premierDriveImage from "@/assets/dallas-premier-drive.png";
 import casaMexicanaImage from "@/assets/casa-mexicana.png";
+import strategyBricksImage from "@/assets/strategy-bricks1.png";
 
 const PortfolioSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -53,6 +54,16 @@ const PortfolioSection = () => {
       liveUrl: "https://mexican-restaurant-template.lovable.app/",
       features: ["Interactive Menu with Cart", "Spicy Level Indicators", "Cultural Design Elements", "Mobile Responsive", "Contact & Location", "Authentic Branding"],
       category: "Restaurant"
+    },
+    {
+      title: "Strategy Bricks",
+      description: "A Tech Startup that Transforms ideas into tangible solutions with LEGO® Serious Play® workshops.",
+      detailedDescription: "LEGO® Serious Play® is a powerful facilitation approach where teams use LEGO bricks to transform ideas into tangible models. These models create a shared language that sparks solutions and builds alignment in ways traditional meetings can't.",
+      image: strategyBricksImage,
+      liveUrl: "https://strategy-bricks.lovable.app/",
+      features: ["Product Features", "Pricing Plans", "Customer Testimonials", "Blog Section", "Contact Form", "Responsive Design"],
+      category: "Tech Startup"
+
     }
   ];
 
@@ -271,7 +282,7 @@ const PortfolioSection = () => {
                     ))}
                     
                     {/* Add more placeholder cards to show expandability */}
-                    {[...Array(2)].map((_, index) => (
+                    {[...Array(1)].map((_, index) => (
                       <div 
                         key={`placeholder-${index}`}
                         className="bg-gray-50 border-2 border-dashed border-gray-300 rounded-xl p-8 flex flex-col items-center justify-center text-gray-400 min-h-[300px]"
@@ -343,12 +354,16 @@ const PortfolioSection = () => {
                   <div className="p-8 space-y-8">
                     {/* Project Image - Back to larger size */}
                     <div className="w-full">
-                      <img 
-                        src={selectedProject?.image} 
-                        alt={selectedProject?.title}
-                        className="w-full max-w-4xl mx-auto h-64 md:h-80 object-cover rounded-lg shadow-lg"
-                      />
-                    </div>
+                    <img 
+                      src={selectedProject?.image} 
+                      alt={selectedProject?.title}
+                      className="w-full max-w-5xl mx-auto object-contain rounded-lg shadow-lg"
+                      style={{ 
+                        maxHeight: 'min(70vh, 500px)',  // Max 70% viewport height OR 500px, whichever is smaller
+                        height: 'auto'                  // Maintain aspect ratio
+                      }}
+                    />
+                  </div>
 
                     {/* Project Content - Back to spacious layout */}
                     <div className="max-w-6xl mx-auto">
