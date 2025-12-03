@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="text-center">
           <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 text-sm">
             <div className="flex items-center">
-              <span>© MyersMakarenkov</span>
+              <span></span>
             </div>
             
             <div className="flex items-center">
@@ -26,12 +26,12 @@ const Footer = () => {
                 <Instagram className="w-2.5 h-2.5 text-white" />
               </div>
               <a 
-                href="https://www.instagram.com/myersmakarenkov/?hl=en" 
+                href="https://www.instagram.com/masterdude191919/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-gray-300 transition-colors"
               >
-                @myersmakarenkov
+                @masterdude191919
               </a>
             </div>
           </div>

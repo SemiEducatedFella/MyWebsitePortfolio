@@ -29,13 +29,14 @@ const PortfolioSection = () => {
       category: "Restaurant"
     },
     {
-      title: "Dallas Move Pros",
-      description: "Professional moving company website with service details, quotes, and customer testimonials.",
-      detailedDescription: "A comprehensive moving company website designed to build trust and generate leads. Features service offerings, quote request system, customer testimonials, service areas, and professional team showcase. Optimized for local SEO and conversion.",
-      image: moveProImage,
-      liveUrl: "https://dallas-move-pros.lovable.app/",
-      features: ["Quote Request System", "Service Area Coverage", "Customer Testimonials", "Team Showcase", "Service Packages", "Contact & Booking"],
-      category: "Service Business"
+      title: "Strategy Bricks",
+      description: "A Tech Startup that Transforms ideas into tangible solutions with LEGO® Serious Play® workshops.",
+      detailedDescription: "LEGO® Serious Play® is a powerful facilitation approach where teams use LEGO bricks to transform ideas into tangible models. These models create a shared language that sparks solutions and builds alignment in ways traditional meetings can't.",
+      image: strategyBricksImage,
+      liveUrl: "https://strategy-bricks.lovable.app/",
+      features: ["Product Features", "Pricing Plans", "Customer Testimonials", "Blog Section", "Contact Form", "Responsive Design"],
+      category: "Tech Startup"
+     
     },
     {
       title: "Dallas Premier Drive",
@@ -56,13 +57,13 @@ const PortfolioSection = () => {
       category: "Restaurant"
     },
     {
-      title: "Strategy Bricks",
-      description: "A Tech Startup that Transforms ideas into tangible solutions with LEGO® Serious Play® workshops.",
-      detailedDescription: "LEGO® Serious Play® is a powerful facilitation approach where teams use LEGO bricks to transform ideas into tangible models. These models create a shared language that sparks solutions and builds alignment in ways traditional meetings can't.",
-      image: strategyBricksImage,
-      liveUrl: "https://strategy-bricks.lovable.app/",
-      features: ["Product Features", "Pricing Plans", "Customer Testimonials", "Blog Section", "Contact Form", "Responsive Design"],
-      category: "Tech Startup"
+       title: "Dallas Move Pros",
+      description: "Professional moving company website with service details, quotes, and customer testimonials.",
+      detailedDescription: "A comprehensive moving company website designed to build trust and generate leads. Features service offerings, quote request system, customer testimonials, service areas, and professional team showcase. Optimized for local SEO and conversion.",
+      image: moveProImage,
+      liveUrl: "https://dallas-move-pros.lovable.app/",
+      features: ["Quote Request System", "Service Area Coverage", "Customer Testimonials", "Team Showcase", "Service Packages", "Contact & Booking"],
+      category: "Service Business"
 
     }
   ];

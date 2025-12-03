@@ -5,17 +5,17 @@ import { Check } from "lucide-react";
 const ServicesSection = () => {
   const plans = [
     {
-      name: "Starter",
+      name: "Simple",
       price: "💰$199",
-      description: "Perfect for new businesses",
+      description: "Perfect for new businesses or individuals",
       features: [
         "1–3 pages (Home, Menu, Contact)",
         "Mobile responsive design",
-        "Basic features only",
-        "Menu with categories + “Order Online” button (links to DoorDash/GrubHub etc.)",
+        "Menu with categories (Showcasing Products/Services)",
         "Setup: included",
         "Hosting & updates: $15/month",
-        "Online payment integration: +$50 add-on"
+        "Online payment integration: +$50 add-on",
+        "Special Features (booking system, calendar, etc) can be included. Contact me for a Quote"
       ]
     },
     {
@@ -24,28 +24,29 @@ const ServicesSection = () => {
       description: "Most popular choice",
       features: [
         "4–6 pages (Home, Menu, About, Contact, Gallery etc.)",
-        "Everything in Starter + About/Gallery pages + branding",
+        "About/Gallery pages + Branding",
         "Mobile responsive design",
-        "Menu with categories + “Order Online” button",
+        "Menu with categories(Showcasing Products/Services)",
         "Setup: included",
         "Hosting & updates: $15/month",
-        "Online payment integration: +$50 add-on"
+        "Online payment integration: +$50 add-on",
+        "Special Features (booking system, calendar, etc) can be included. Contact me for a Quote"
       ],
       popular: true
     },
     {
       name: "Premium",
-      price: "💰 $499–$599",
+      price: "💰 399+",
       description: "For growing businesses",
       features: [
         "6+ pages (all Standard pages plus Specials, Events, or other custom pages)",
-        "Everything in Full Website + priority turnaround",
         "Mobile responsive design",
-        "Menu with categories + “Order Online” button",
+        "Menu with categories (Showcasing Products/Services)",
         "One small custom feature included (e.g., reservation form, specials calendar)",
         "Setup: included",
         "Hosting & updates: $15/month",
-        "Online payment integration: included"
+        "Online payment integration: included",
+        "Special Features (booking system, calendar, etc) can be included. Contact me for a Quote"
       ]
     }
   ];

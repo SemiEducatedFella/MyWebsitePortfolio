@@ -90,12 +90,12 @@ const ContactSection = () => {
                     <div>
                       <div className="font-medium text-foreground">Instagram</div>
                       <a 
-                        href="https://www.instagram.com/myersmakarenkov/?hl=en" 
+                        href="https://www.instagram.com/masterdude191919/" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        @myersmakarenkov
+                        @masterdude191919
                       </a>
                     </div>
                   </div>
