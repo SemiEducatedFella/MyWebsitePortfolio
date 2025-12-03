@@ -47,12 +47,7 @@ const NavigationBar: React.FC = () => {
             >
               Process
             </button>
-            <button
-              onClick={() => scrollToSection('testimonials')}
-              className="px-4 py-4 text-white hover:text-purple-200 transition-colors duration-300 font-medium"
-            >
-              Testimonials
-            </button>
+         
             <button
               onClick={() => scrollToSection('contact')}
               className="px-4 py-4 text-white hover:text-purple-200 transition-colors duration-300 font-medium"
