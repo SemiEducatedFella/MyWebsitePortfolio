@@ -12,7 +12,7 @@ const NavigationBar: React.FC = () => {
         <div className="flex justify-between items-center">
           {/* Logo/Brand */}
           <div className="text-white text-xl font-bold py-4">
-            Myers Makarenkov
+            Get Better Websites
           </div>
           
           {/* Navigation Links */}
